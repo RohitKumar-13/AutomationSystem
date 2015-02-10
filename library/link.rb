@@ -4,8 +4,7 @@ require 'net/http'
 
 module Link
 	attr_accessor :linkUrl
-
-
+	
 	def verifyLink(url)
 		@linkUrl = url
 		@MainWebsite = 'http://www.nestaway.in'
