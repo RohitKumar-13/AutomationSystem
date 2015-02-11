@@ -3,7 +3,7 @@ require 'selenium-webdriver'
 
 module Header
 	def getLogo
-		script = "var A = document.getElementsById('logo');
+		script = "var A = document.getElementById('logo_id');
 			return A.src;
 		"
 		logo = $driver.execute_script(script)
@@ -11,7 +11,7 @@ module Header
 	end
 
 	def getLogoLink
-		script = "var A = document.getElementsById('logo');
+		script = "var A = document.getElementById('logo_id');
 			return A.parentElement.href;
 		"
 	end

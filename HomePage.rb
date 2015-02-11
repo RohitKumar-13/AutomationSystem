@@ -16,7 +16,7 @@ header = HomePage.new()
 header.openUrl('http://www.dev.nestaway.in', config)
 
 logo = header.getLogo
-puts logo
-logolink = header.getLogoLink
-puts logolink
+#puts logo
+#logolink = header.getLogoLink
+#puts logolink
 header.closeUrl
