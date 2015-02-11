@@ -13,8 +13,10 @@ end
 config = {'bro'=>'Chrome','bro_v'=>'39.0','os'=>'windows','os_v'=>'8','js'=>'true', 'css'=>'true', 'ssl'=>'true','name'=>'NestAway header Test'}
 header = HomePage.new()
 
-header.openUrl('http://www.nestaway.in', config)
+header.openUrl('http://www.dev.nestaway.in', config)
 
 logo = header.getLogo
 puts logo
+logolink = header.getLogoLink
+puts logolink
 header.closeUrl
