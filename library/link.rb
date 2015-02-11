@@ -3,8 +3,6 @@ require 'selenium-webdriver'
 require 'net/http'
 
 module Link
-	attr_accessor :linkUrl
-	
 	def verifyLink(url)
 		@linkUrl = url
 		@MainWebsite = 'http://www.nestaway.in'
@@ -30,7 +28,6 @@ module Link
 				return false
 			end
 		end
-
 		return false
 	end
 

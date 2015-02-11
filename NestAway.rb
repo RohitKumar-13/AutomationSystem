@@ -2,7 +2,7 @@ require 'rubygems'
 require 'selenium-webdriver'
 
 module NestAway
-	$MainWebsite = 'www.nestaway.in'
+	$MainWebsite = 'http://www.nestaway.in'
     $currentSite
 	def initialize							#default
 		$caps = Selenium::WebDriver::Remote::Capabilities.new
@@ -31,7 +31,8 @@ module NestAway
 			url = args[0]
 			@@currentSite = url
 		end
-		$driver = Selenium::WebDriver.for(:remote,:url => "http://rishav2:ZzNbRxCxJMaHy5zLxCJX@hub.browserstack.com/wd/hub",:desired_capabilities => $caps)
+		$driver = Selenium::WebDriver.for(:remote,:url => "http://ravi370:3Xnr4MwpEow6NUL6ysNM@hub.browserstack.com/wd/hub",:desired_capabilities => $caps)
+		$driver.manage.timeouts.implicit_wait = 10
 		$driver.navigate.to @@currentSite		#start browser and specific url
 	end
 
