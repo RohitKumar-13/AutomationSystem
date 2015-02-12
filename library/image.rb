@@ -41,7 +41,12 @@ module Image
 
 	def isImageLoaded(id, url)
 		if isImageBackground(id, url)
-			
+			script = "
+				var result = false;
+				$('<img/>').attr('src','#{url}').load(function(){result = true;});
+				return result;
+			"
+			return $driver.execute_async_script(script)
 		else
 			script = "
 			var A = document.getElementById('#{id}');

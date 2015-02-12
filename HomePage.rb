@@ -66,11 +66,20 @@ end
 
 # => NestAway Contact-Popup
 puts header.getContactUs
+
 #===================End Header======================#
+
+#/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\#
+#----------------------------------------------------#
+#\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/#
 
 #=====================Banner========================#
 banner = HomePage.new
-puts banner.getSmallHeading
-puts banner.getButton
+
+url =  banner.getBackgroundImage
+id = banner.getBackgroundImageID
+puts url
+puts id
+puts banner.isImageLoaded(id, url)
 #===================End Banner======================#
 header.closeUrl
