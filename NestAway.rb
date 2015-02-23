@@ -31,7 +31,7 @@ module NestAway
 			url = args[0]
 			@@currentSite = url
 		end
-		$driver = Selenium::WebDriver.for(:remote,:url => "http://ravi370:3Xnr4MwpEow6NUL6ysNM@hub.browserstack.com/wd/hub",:desired_capabilities => $caps)
+		$driver = Selenium::WebDriver.for(:remote,:url => "http://suresh291:zCiDLTcrqezsdKt4SLm8@hub.browserstack.com/wd/hub",:desired_capabilities => $caps)
 		$driver.manage.timeouts.implicit_wait = 10
 		$driver.navigate.to @@currentSite		#start browser and specific url
 	end
